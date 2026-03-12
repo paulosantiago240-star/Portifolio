@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+} /* Reset de margens e preenchimentos, e definição da fonte padrão */
+
+html {
+  scroll-behavior: smooth;
+} /* Habilita a rolagem suave para âncoras */
+
+:root {
+  --primary-color: #ffffff; /* Cor primária para botões e links */
+  --secondary-color: #6c757d; /* Cor secundária para elementos de destaque */
+  --background-color: #081229; /* Cor de fundo para o site */
+  --text-color: #fbfcfd; /* Cor do texto principal */
+} /* Variáveis CSS para cores, facilitando a manutenção do tema */
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+} /* Estilização do corpo do site, definindo a cor de fundo, cor do texto e espaçamento entre linhas */
+
+.navegacao {
+  position: fixed;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 18, 41, 0.9),
+    rgba(8, 18, 41, 0.7)
+  );
+  width: 100%;
+  z-index: 100;
+  padding: 1.5rem;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.menu-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem;
+  transition: color 0.5s ease;
+}
+
+.menu-link::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  transition: width 0.5s ease;
+}
+
+.menu-link:hover::after {
+  width: 100%;
+}
+
+.menu-link:hover {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  transition: all 0.5s ease;
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.foto-perfil {
+  width: 250px;
+  height: 250px;
+  box-shadow:
+    0 6px 18px rgba(255, 255, 255, 0.164),
+    0 0 20px rgba(255, 255, 255, 0.164);
+  border-radius: 50%;
+  border: 1px solid var(--text-color);
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.foto-perfil:hover {
+  box-shadow:
+    0 6px 18px rgba(255, 255, 255, 0.007),
+    0 0 20px rgba(255, 255, 255, 0.164);
+  transform: translateY(-10px) scale(1.01);
+  transition: all 0.5s ease-in-out;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.cabecalho p {
+  padding: auto;
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+.sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem 2rem;
+}
+
+.sobre-titulo {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.sobre-caixa {
+  background: rgba(35, 44, 65, 0.623);
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid var(--secondary-color);
+  backdrop-filter: blur(10px);
+}
+
+.sobre-paragrafo {
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.projetos {
+  padding: 5rem 2rem;
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+.projetos-titulo {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.projetos-caixa {
+  background: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.projetos-nome {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.projetos-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.projeto-link,
+.projeto-link * {
+  text-decoration: none;
+  color: inherit;
+}
+
+.projetos-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.projetos-card {
+  width: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(35, 44, 65, 0.623);
+  border: 1px solid rgba(255, 255, 255, 0.164);
+  transition:
+    transform 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out;
+}
+
+.projetos-card:hover {
+  box-shadow:
+    0 6px 18px rgba(255, 255, 255, 0.007),
+    0 0 20px rgba(255, 255, 255, 0.164);
+  transform: translateY(-10px) scale(1.01);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.projetos-imagem {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.projetos-descricao {
+  padding: 1.5rem;
+  text-align: left;
+  color: var(--text-color);
+}
+
+/* CSS do rodapé */
+
+.footer-contato {
+  background-color: var(--background-color);
+  text-align: center;
+  padding: 40px 0;
+}
+
+.footer-contato h2 {
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+.contato-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.contato-icons a {
+  text-decoration: none;
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 40px;
+  color: var(--text-color);
+
+  transition: all 0.5s ease;
+}
+
+.contato-icons a:hover {
+  transform: scale(1.1);
+}
+
+.divider {
+  height: 1px;
+  width: 70%;
+  margin: 0 auto;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--secondary-color),
+    transparent
+  );
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  border: 1px solid var(--secondary-color);
+
+  background: rgba(35, 44, 65, 0.623);
+  color: white;
+
+  font-size: 22px;
+  cursor: pointer;
+  font-weight: 100;
+
+  display: none;
+
+  z-index: 1000;
+
+  transition:
+    transform 0.5s,
+    background 0.5s;
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}

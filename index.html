@@ -1,0 +1,171 @@
+<!doctype html>
+<!-- 
+  Este é um arquivo HTML básico para um portfólio pessoal. Ele inclui uma estrutura simples com seções para início, sobre, projetos e contato. O código será expandido com estilos CSS e funcionalidades JavaScript para melhorar a aparência e a interatividade do site.
+-->
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link para o arquivo CSS que irá estilizar o site -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Link para a biblioteca de ícones Font Awesome, que permite usar ícones em todo o site -->
+    <title>Portfólio | Luis Paulo Loubet</title>
+    <!-- Título da página (como irá aparecer no navegador) -->
+  </head>
+
+  <!-- Corpo do site, onde tudo fica visível -->
+
+  <body>
+    <nav class="navegacao">
+      <!-- Barra de navegação para facilitar o acesso às seções do site (o comando 'nav' cria essa barra, o comando 'ul' cria a lista de itens, o comando 'li' cria os itens da lista. o comando 'class' cria uma classe para estilizar o elemento posteriormente com CSS. O comando 'href' cria um link para a seção correspondente na página) -->
+      <ul class="menu">
+        <li><a href="#inicio" class="menu-link">Inicio</a></li>
+        <li><a href="#sobre" class="menu-link">Sobre</a></li>
+        <li><a href="#projetos" class="menu-link">Projetos</a></li>
+        <li><a href="#contato" class="menu-link">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Conteúdo principal do site (o comando 'main' indica que o conteúdo dentro dele é o conteúdo principal da página) -->
+
+      <section id="inicio" class="cabecalho">
+        <div>
+          <img
+            src="img/Luis Paulo.png"
+            alt="Foto de Luis Paulo"
+            class="foto-perfil"
+          />
+        </div>
+        <h1>Luis Paulo Loubet</h1>
+        <p>
+          Desenvolvedor Full Stack com foco em criar soluções inovadoras e
+          eficientes.
+        </p>
+      </section>
+
+      <hr class="divider" />
+
+      <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+          <p class="sobre-paragrafo">
+            Tenho experiência em desenvolvimento web, mobile e inteligência
+            artificial. Sou dedicado a aprender novas tecnologias e a criar
+            soluções inovadoras para desafios complexos. Meu objetivo é
+            contribuir para projetos que façam a diferença e impactem
+            positivamente a vida das pessoas.
+          </p>
+        </div>
+      </section>
+
+      <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+          <a href="projeto1.html" class="projeto-link">
+            <div class="projetos-card">
+              <img
+                src="img/projeto1.png"
+                alt="Projeto 1"
+                class="projetos-imagem"
+              />
+              <h3 class="projetos-nome">Projeto 1</h3>
+              <p class="projetos-descricao">
+                Desenvolvi um aplicativo de tarefas para ajudar as pessoas a
+                organizarem suas atividades diárias. O aplicativo possui uma
+                interface intuitiva e recursos como lembretes e categorias
+                personalizadas.
+              </p>
+            </div>
+          </a>
+
+          <div class="projetos-card">
+            <img
+              src="img/projeto2.jpg"
+              alt="Projeto 2"
+              class="projetos-imagem"
+            />
+            <h3 class="projetos-nome">Projeto 2</h3>
+            <p class="projetos-descricao">
+              Criei este site de portfólio para apresentar meus projetos e
+              habilidades. Ele foi desenvolvido utilizando HTML, CSS e
+              JavaScript, e é responsivo para garantir uma boa experiência em
+              dispositivos móveis.
+            </p>
+          </div>
+          <div class="projetos-card">
+            <img
+              src="img/projeto3.jpg"
+              alt="Projeto 3"
+              class="projetos-imagem"
+            />
+            <h3 class="projetos-nome">Projeto 3</h3>
+            <p class="projetos-descricao">
+              Participei de um projeto de inteligência artificial onde
+              desenvolvemos um modelo de aprendizado de máquina para prever
+              tendências de mercado.
+            </p>
+          </div>
+          <div class="projetos-card">
+            <img
+              src="img/projeto4.jpg"
+              alt="Projeto 4"
+              class="projetos-imagem"
+            />
+            <h3 class="projetos-nome">Projeto 4</h3>
+            <p class="projetos-descricao">
+              Desenvolvi uma aplicação web para gerenciar projetos de
+              desenvolvimento de software, utilizando tecnologias modernas de
+              frontend e backend.
+            </p>
+          </div>
+          <div class="projetos-card">
+            <img
+              src="img/projeto5.jpg"
+              alt="Projeto 5"
+              class="projetos-imagem"
+            />
+            <h3 class="projetos-nome">Projeto 5</h3>
+            <p class="projetos-descricao">
+              Criei um sistema de gerenciamento de tarefas para equipes de
+              desenvolvimento, com funcionalidades de colaboração e
+              acompanhamento de progresso.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <footer class="footer-contato" id="contato">
+        <h2>Contato</h2>
+
+        <div class="contato-icons">
+          <a href="mailto:paulosantiago240@gmail.com" target="_blank">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+
+          <a href="https://wa.me/5567992562363" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/luis-paulo-loubet-557712179"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+      </footer>
+
+      <button class="back-to-top">↑</button>
+
+      <script src="script.js"></script>
+      <!-- Link para o arquivo JavaScript que irá adicionar interatividade ao site -->
+    </main>
+  </body>
+</html>
